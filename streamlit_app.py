@@ -5,7 +5,7 @@ from dashscope import Application
 # 直接在代码中硬编码API密钥（不推荐，仅供测试使用）
 api_key = 'sk-cdf976f2ae78411288dfec1fee87717e'
 
-st.title("💬 经管一核两翼智能助手")
+st.title("💬 ERP智能助手")
 
 # 初始化会话状态
 session_state = st.session_state
@@ -20,7 +20,7 @@ for msg in st.session_state.messages:
 def fetch_data_from_bailian(query, session_id=None):
     # 使用上一次的session_id，如果没有则为None
     response = Application.call(
-        app_id='55f75f83f52248c5a2aed6e23c398883',
+        app_id='e0ab2eeae1b04f8b801c6c1f534bbc75',
         prompt=query,
         api_key=api_key,
         session_id=session_id  # 添加session_id参数
